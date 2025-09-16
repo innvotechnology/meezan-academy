@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meezan Academy Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      /* Add logo as background */
+      background: url("Meezan.png") no-repeat center center fixed;
+      background-size: contain; /* makes it fit screen */
+    }
+
+    .login-box {
+      background: rgba(255,255,255,0.9); /* white box with little transparency */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 { color: #003366; margin-bottom: 20px; }
+    input {
+      width: 90%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    button {
+      background: #003366; color: white; border: none;
+      padding: 10px 20px; border-radius: 5px;
+      cursor: pointer; transition: 0.3s;
+    }
+    button:hover { background: #00509e; }
+    .error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Meezan Academy Portal</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p class="error" id="error"></p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim().toLowerCase();
+      const pass = document.getElementById("password").value.trim().toLowerCase();
+
+      if (user === "student" && pass === "student") {
+        window.location.href = "student.html";
+      } else if (user === "faculty" && pass === "faculty") {
+        window.location.href = "faculty.html";
+      } else if (user === "admin" && pass === "admin") {
+        window.location.href = "admin.html";
+      } else {
+        document.getElementById("error").innerText = "Invalid login!";
+      }
+    }
+  </script>
+</body>
+</html>

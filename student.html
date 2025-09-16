@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Meezan Academy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f6fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .sidebar {
+      height: 100vh;
+      background: #003366;
+      color: #fff;
+      padding-top: 20px;
+      position: fixed;
+      width: 240px;
+    }
+    .sidebar a {
+      display: block;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      margin: 5px 0;
+      border-radius: 8px;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #00509e;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .card i {
+      font-size: 2rem;
+      color: #003366;
+    }
+    .table {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4 class="text-center mb-4">Meezan Academy</h4>
+    <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="#"><i class="fas fa-user"></i> My Profile</a>
+    <a href="#"><i class="fas fa-calendar"></i> Test Schedule</a>
+    <a href="#"><i class="fas fa-book"></i> My Results</a>
+    <a href="#"><i class="fas fa-bullhorn"></i> Announcements</a>
+    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Welcome, Student!</h2>
+      <img src="https://via.placeholder.com/40" class="rounded-circle" alt="profile">
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-3">
+        <div class="card p-3 text-center">
+          <i class="fas fa-file-alt"></i>
+          <h5 class="mt-2">Next Test</h5>
+          <p>Maths - 15 Sept</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 text-center">
+          <i class="fas fa-chart-line"></i>
+          <h5 class="mt-2">Latest Result</h5>
+          <p>Physics - 85%</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 text-center">
+          <i class="fas fa-user-check"></i>
+          <h5 class="mt-2">Attendance</h5>
+          <p>92%</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3 text-center">
+          <i class="fas fa-bell"></i>
+          <h5 class="mt-2">Notifications</h5>
+          <p>2 New</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="card mb-4 p-3">
+      <h5>My Results</h5>
+      <table class="table table-hover mt-2">
+        <thead class="table-dark">
+          <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mathematics</td><td>90</td><td>A+</td></tr>
+          <tr><td>Physics</td><td>85</td><td>A</td></tr>
+          <tr><td>Chemistry</td><td>78</td><td>B+</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Announcements -->
+    <div class="card p-3">
+      <h5>Announcements</h5>
+      <ul>
+        <li>Monthly exams start from 20th Sept.</li>
+        <li>Grand Test series begins in January.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
